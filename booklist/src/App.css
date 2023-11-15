@@ -1,3 +1,62 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(201 177 145);
+}
+
 .App {
   text-align: center;
+  margin-top: 50px;
+}
+
+h1 {
+  color: #000000;
+}
+
+p {
+  color: #3b3b3b;
+}
+
+.books {
+  margin: inherit;
+}
+
+h2 {
+  color: #913c3c;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+li {
+  background-color: #f3e3d3;
+  padding: 10px;
+  margin: 5px 0;
+  width: 400px;
+  border-radius: 10px;
+}
+
+/* Media query for smaller screens (e.g., phones) */
+@media (max-width: 600px) {
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  ul {
+    max-width: 100%; 
+  }
+
+  li {
+    max-width: 100%; 
+  }
 }
