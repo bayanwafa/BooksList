@@ -18,6 +18,34 @@ p {
   color: #3b3b3b;
 }
 
+/* Styles for AddBookForm */
+.addbook {
+  margin: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  padding: 8px;
+  margin: 5px;
+  width: 300px;
+}
+
+button {
+  padding: 10px;
+  background-color: #913c3c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #502020;
+}
+
+/* Styles for BookList */
 .books {
   margin: inherit;
 }
@@ -39,7 +67,7 @@ li {
   background-color: #f3e3d3;
   padding: 10px;
   margin: 5px 0;
-  width: 400px;
+  width: 300px;
   border-radius: 10px;
 }
 
@@ -52,11 +80,12 @@ li {
     overflow-x: hidden;
   }
 
-  ul {
-    max-width: 100%; 
+  li {
+    max-width: 100%;
   }
 
-  li {
-    max-width: 100%; 
+  input {
+    max-width: 100%;
   }
+
 }
