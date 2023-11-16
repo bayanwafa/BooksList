@@ -20,4 +20,4 @@ Welcome to the Book List React application! This simple web app allows users to 
 
 2. Remove a book:
 
-Click the "X" next to the book you want to remove.
+- Click the "X" next to the book you want to remove.
