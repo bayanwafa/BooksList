@@ -12,6 +12,13 @@ function App() {
     setBooks([...books, newBook]);
   };
 
+  // Function to remove a book from the list
+  const removeBook = (index) => {
+    const updatedBooks = [...books];
+    updatedBooks.splice(index, 1);
+    setBooks(updatedBooks);
+  };
+
 
 
   return (
@@ -22,8 +29,8 @@ function App() {
       {/* Pass the addBook function to AddBookForm */}
       <AddBookForm addBook={addBook} />
 
-      {/* Pass the list of books and the addBook function to BookList */}
-      <BookList books={books} />
+      {/* Pass the list of books, addBook, and removeBook functions to BookList */}
+      <BookList books={books} removeBook={removeBook} />
     </div>
   );
 }
