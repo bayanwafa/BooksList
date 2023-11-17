@@ -1,27 +1,33 @@
+/* Global Reset Styles */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Body Styles */
 body {
   font-family: 'Arial', sans-serif;
   background-color: rgb(201 177 145);
 }
 
+/* App Container Styles */
 .App {
   text-align: center;
   margin-top: 50px;
 }
 
+/* Header Styles */
 h1 {
   color: #000000;
 }
 
+/* Paragraph Styles */
 p {
   color: #3b3b3b;
 }
 
+/* Styles for AddBookForm and EditBookForm */
 .addbook,
 .editebook {
   margin: inherit;
@@ -30,6 +36,7 @@ p {
   align-items: center;
 }
 
+/* Input Styles */
 input {
   padding: 8px;
   margin: 5px;
@@ -38,6 +45,7 @@ input {
   border-radius: 5px;
 }
 
+/* Button Styles */
 button {
   padding: 10px;
   background-color: #913c3c;
@@ -56,11 +64,13 @@ button:hover {
   margin: inherit;
 }
 
+/* Header Styles in BookList */
 h2 {
   color: #913c3c;
   margin-bottom: 5px;
 }
 
+/* List Styles in BookList */
 ul {
   list-style-type: none;
   padding: 0;
@@ -70,6 +80,7 @@ ul {
   align-items: center;
 }
 
+/* List Item Styles in BookList */
 li {
   background-color: #f3e3d3;
   padding: 10px;
@@ -79,11 +90,13 @@ li {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Button Container Styles in BookList */
 .buttons {
   cursor: pointer;
   float: right;
 }
 
+/* Remove Book Button Styles */
 .removebook {
   color: #502020;
 }
@@ -98,6 +111,7 @@ li {
     overflow-x: hidden;
   }
 
+  /* Adjust styles for smaller screens */
   li {
     max-width: 100%;
   }

@@ -10,12 +10,15 @@ function BookList({ books, removeBook, editBook }) {
     removeBook(id);
   };
 
+  // State to track the book being edited
   const [editingBookId, setEditingBookId] = useState(null);
 
+  // Function to handle initiating the editing of a book
   const handleEditClick = (bookId) => {
     setEditingBookId(bookId);
   };
 
+  // Function to handle completing the editing of a book
   const handleEditComplete = () => {
     setEditingBookId(null);
   };
@@ -26,17 +29,22 @@ function BookList({ books, removeBook, editBook }) {
       <ul>
         {books.map((book) => (
           <li key={book.id}>
+            {/* Check if the book is being edited */}
             {editingBookId === book.id ? (
+              // Display the EditBookForm when editing
               <EditBookForm
                 book={book}
                 editBook={editBook}
                 onSave={handleEditComplete}
               />
             ) : (
+              // Display book title and options when not editing
               <>
                 {book.title}{' '}
                 <div className='buttons'>
+                  {/* Edit button to initiate editing */}
                   <MdEdit className='editTitle' onClick={() => handleEditClick(book.id)} />{' '}
+                  {/* Remove button to remove the book */}
                   <IoMdCloseCircle className='removebook' onClick={() => handleRemoveBook(book.id)} />
                 </div>
               </>

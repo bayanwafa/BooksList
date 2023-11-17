@@ -25,7 +25,9 @@ function AddBookForm({ addBook }) {
 
     return (
         <form className='addbook' onSubmit={handleSubmit}>
+            {/* Heading for the form */}
             <h2>Add a Book:</h2>
+            {/* Input field for the book title */}
             <input
                 type="text"
                 id="newBookTitle"
@@ -33,6 +35,7 @@ function AddBookForm({ addBook }) {
                 onChange={handleInputChange}
                 placeholder="Enter book title"
             />
+            {/* Button to submit the form */}
             <button type="submit">Add Book</button>
         </form>
     );
