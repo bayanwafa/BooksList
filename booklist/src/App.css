@@ -1,7 +1,11 @@
-body {
-  font-family: 'Arial', sans-serif;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
   background-color: rgb(201 177 145);
 }
 
@@ -18,8 +22,8 @@ p {
   color: #3b3b3b;
 }
 
-/* Styles for AddBookForm */
-.addbook {
+.addbook,
+.editebook {
   margin: inherit;
   display: flex;
   flex-direction: column;
@@ -30,6 +34,8 @@ input {
   padding: 8px;
   margin: 5px;
   width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 button {
@@ -52,6 +58,7 @@ button:hover {
 
 h2 {
   color: #913c3c;
+  margin-bottom: 5px;
 }
 
 ul {
@@ -69,14 +76,17 @@ li {
   margin: 5px 0;
   width: 300px;
   border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+  cursor: pointer;
+  float: right;
 }
 
 .removebook {
-  cursor: pointer;
-  float: right;
   color: #502020;
 }
-
 
 
 /* Media query for smaller screens (e.g., phones) */

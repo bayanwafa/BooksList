@@ -41,6 +41,12 @@ function App() {
       });
   };
 
+  const editBook = (id, updatedBook) => {
+    Axios.put(url + "/" + id, updatedBook).then(() => {
+      getAll();
+    });
+  };
+
 
   return (
     <div className="App">
@@ -51,7 +57,7 @@ function App() {
       <AddBookForm addBook={addBook} />
 
       {/* Pass the list of books, addBook, and removeBook functions to BookList */}
-      <BookList books={books} removeBook={removeBook} />
+      <BookList books={books} removeBook={removeBook} editBook={editBook} />
     </div>
   );
 }
