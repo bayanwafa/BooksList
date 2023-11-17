@@ -1,24 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import BookList from './BookList';
 import AddBookForm from './AddBookForm';
 import './App.css';
+import Axios from 'axios';
+
+const url = 'https://6555949984b36e3a431df3ea.mockapi.io/books';
+
 
 function App() {
   // State to manage the list of books
   const [books, setBooks] = useState([]);
 
+  function getAll() {
+    Axios.get(url).then((response) => {
+      setBooks(response.data);
+    });
+  }
+
+  useEffect(() => {
+    getAll();
+  }, []);
+
   // Function to add a new book to the list
   const addBook = (newBook) => {
-    setBooks([...books, newBook]);
+    // Add a new book to the server
+    Axios.post(url, newBook).then((response) => {
+      getAll();
+    });
   };
 
   // Function to remove a book from the list
-  const removeBook = (index) => {
-    const updatedBooks = [...books];
-    updatedBooks.splice(index, 1);
-    setBooks(updatedBooks);
+  const removeBook = (id) => {
+    // Remove the book from the server
+    Axios.delete(url + "/" + id)
+      .then(() => {
+        getAll();
+      })
+      .catch((error) => {
+        console.error('Error removing book:', error);
+      });
   };
-
 
 
   return (
