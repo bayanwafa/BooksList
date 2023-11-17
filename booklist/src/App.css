@@ -17,6 +17,19 @@ body {
   margin-top: 50px;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+
+/* Logo Styles */
+.logo {
+  font-size: 3em;
+  margin: 10px;
+}
+
 /* Header Styles */
 h1 {
   color: #000000;

@@ -3,6 +3,7 @@ import BookList from './BookList';
 import AddBookForm from './AddBookForm';
 import './App.css';
 import Axios from 'axios';
+import { GrNotes } from "react-icons/gr";
 
 const url = 'https://6555949984b36e3a431df3ea.mockapi.io/books';
 
@@ -65,8 +66,12 @@ function App() {
 
   return (
     <div className="App">
-      <h1>My Book List</h1>
+      <div className="header">
+        <GrNotes className="logo" />
+        <h1>My Book List</h1>
+      </div>
       <p>This is a simple React application to manage your book list.</p>
+
 
       {/* Pass the addBook function to AddBookForm */}
       <AddBookForm addBook={addBook} />
