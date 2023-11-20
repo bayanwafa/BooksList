@@ -6,6 +6,7 @@ Welcome to the Book List React application! This simple web app allows users to 
 
 - Add books to your list.
 - Remove books from your list.
+- Edit book title from your list.
 
 ## Technologies Used
 
@@ -21,3 +22,7 @@ Welcome to the Book List React application! This simple web app allows users to 
 2. Remove a book:
 
 - Click the "X" next to the book you want to remove.
+
+3. Edit a title:
+
+- Click the edit next to the book title you want to edit.
